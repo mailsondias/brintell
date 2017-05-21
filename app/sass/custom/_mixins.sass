@@ -1,0 +1,134 @@
+@import "variables"
+
+@mixin bp-large
+    @media only screen and (max-width: 60em)
+        @content
+
+@mixin bp-medium
+    @media only screen and (max-width: 40em)
+        @content
+
+@mixin bp-small
+    @media only screen and (max-width: 30em)
+        @content
+
+@mixin borderRadius($radius) 
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    border-radius: $radius
+
+
+@mixin borderRadiusCombination($top-left, $top-right, $bottom-right, $bottom-left) 
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -moz-border-radius: $top-left $top-right $bottom-right $bottom-left
+    -ms-border-radius: $top-left $top-right $bottom-right $bottom-left
+    border-radius: $top-left $top-right $bottom-right $bottom-left
+
+
+@mixin transition($transition-property, $transition-time, $method) 
+    -webkit-transition: $transition-property $transition-time $method
+    -moz-transition: $transition-property $transition-time $method
+    -ms-transition: $transition-property $transition-time $method
+    -o-transition: $transition-property $transition-time $method
+    transition: $transition-property $transition-time $method
+
+
+@mixin transform($transforms)
+    -o-transform: $transforms
+    -ms-transform: $transforms
+    -moz-transform: $transforms
+    -webkit-transform: $transforms
+    transform: $transforms
+
+
+@mixin linear-gradient($position, $start-colour, $colors)
+    background-color: $start-colour
+    background-image: -webkit-linear-gradient($position, $colors)
+    background-image: -moz-linear-gradient($position, $colors)
+    background-image: -ms-linear-gradient($position, $colors)
+    background-image: -o-linear-gradient($position, $colors)
+    background-image: linear-gradient($position, $colors)
+
+
+@mixin textShadow($top, $sides, $blur, $color, $inset: false) 
+    @if $inset 
+        -webkit-text-shadow: inset $top $sides $blur $color
+        -moz-text-shadow: inset $top $sides $blur $color
+        text-shadow: inset $top $sides $blur $color
+    @else 
+        -webkit-text-shadow: $top $sides $blur $color
+        -moz-text-shadow: $top $sides $blur $color
+        text-shadow: $top $sides $blur $color
+
+
+@mixin boxShadow($top, $sides, $blur, $color, $inset: false) 
+    @if $inset 
+        -webkit-box-shadow: inset $top $sides $blur $color
+        -moz-box-shadow: inset $top $sides $blur $color
+        box-shadow: inset $top $sides $blur $color
+    @else 
+        -webkit-box-shadow: $top $sides $blur $color
+        -moz-box-shadow: $top $sides $blur $color
+        box-shadow: $top $sides $blur $color
+  
+
+@mixin translate($rotateX, $rotateY)
+    -ms-transform: translate($rotateX,$rotateY)
+    -webkit-transform: translate($rotateX,$rotateY)
+    transform: translate($rotateX,$rotateY) 
+
+
+@mixin scale($scale) 
+    transform: scale($scale)
+    -moz-transform: scale($scale)
+    -webkit-transform: scale($scale)
+
+
+@mixin grayscale($scale)
+    filter: grayscale($scale)
+    -webkit-filter: grayscale($scale)
+    -moz-filter: grayscale($scale)
+    -o-filter: grayscale($scale)
+
+
+@mixin brightness($scale)
+    filter: brightness($scale)
+    -webkit-filter: brightness($scale)
+    -moz-filter: brightness($scale)
+    -o-filter: brightness($scale)
+    
+
+@mixin rotate($rotate) 
+    transform: rotate($rotate)
+    -o-transform: rotate($rotate)
+    -moz-transform: rotate($rotate)
+    -webkit-transform: rotate($rotate)
+
+
+@mixin backgroundSize($cover) 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    background-position: top center
+
+
+@mixin fontStyle($fontFamily, $fontSize, $fontColor) 
+    font-family: $fontFamily
+    font-size: $fontSize
+    color: $fontColor
+
+
+@mixin blur($scale)
+    filter: blur($scale)
+    -webkit-filter: blur($scale)
+    -moz-filter: blur($scale)
+    -o-filter: blur($scale)
+
+
+@mixin opacity($opacity)
+    opacity: $opacity
+    $opacity-ie: $opacity * 100
+    filter: alpha(opacity=$opacity-ie) //IE8
+

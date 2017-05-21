@@ -1,0 +1,11 @@
+{
+  "name": "getstarted",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "slick-carousel": "^1.5.9",
+    "font-awesome": "fontawesome#^4.5.0"
+  },
+  "devDependencies": {},
+  "overrides": {}
+}

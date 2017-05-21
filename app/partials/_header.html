@@ -1,0 +1,54 @@
+<!-- fb -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=137589169668585";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- /fb -->
+
+<div id="loading" class="loading"><div class="cell-load text-center"><div class="load">&nbsp;</div></div></div>
+
+<header class="header">
+    <div class="container cl">
+        <a href="http://odontolago.com.br/" class="lg"><h1><img src="images/odontolago.png" height="100%" width="auto" alt="Odontolago"></h1></a>
+        <div class="bt-call hidden-xxs">
+            <span><i class="fa fa-phone"></i> (61) 3468-1993</span>
+        </div>
+        <a href="#marcar-consulta" class="bt bt-marcar-consulta up t-r">Marcar consulta</a>
+    </div>
+</header>
+<nav class="navbar">
+    <a href="#this" id="btn-menu"><ul class="burger"><li class="first"></li><li class="second"></li><li class="third"></li></ul></a>
+    <div class="container t-c">
+    @@if (!context.menu) {
+        <ul class="menu"><!--
+            --><li><a href="http://odontolago.com.br/" class="bt">Home</a></li><!--
+            --><li><a href="a-clinica" class="bt">A Clínica</a></li><!--
+            --><li><a href="especialidades" class="bt">Especialidades</a></li><!--
+            --><li><a href="#tratamentos" class="bt">Tratamentos</a></li><!--
+            --><li><a href="#contato" class="bt">Contato</a></li><!--
+        --></ul>
+    }
+    @@if (context.menu === "home") {
+        <ul class="menu"><!--
+            --><li><a href="http://odontolago.com.br/" class="bt -current">Home</a></li><!--
+            --><li><a href="a-clinica" class="bt">A Clínica</a></li><!--
+            --><li><a href="especialidades" class="bt">Especialidades</a></li><!--
+            --><li><a href="#tratamentos" class="bt">Tratamentos</a></li><!--
+            --><li><a href="#contato" class="bt">Contato</a></li><!--
+        --></ul>
+    }
+    @@if (context.menu === "a-clinica") {
+        <ul class="menu"><!--
+            --><li><a href="http://odontolago.com.br/" class="bt">Home</a></li><!--
+            --><li><a href="a-clinica" class="bt -current">A Clínica</a></li><!--
+            --><li><a href="especialidades" class="bt">Especialidades</a></li><!--
+            --><li><a href="#tratamentos" class="bt">Tratamentos</a></li><!--
+            --><li><a href="#contato" class="bt">Contato</a></li><!--
+        --></ul>
+    }
+    </div>
+</nav>

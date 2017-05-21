@@ -1,0 +1,223 @@
+form 
+    &.-inactive 
+        visibility: hidden 
+        z-index: -1
+
+.input-field,
+.select-field,
+.textarea-field
+    font-size: 1em
+    padding: 0 0 1em
+
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=time],
+textarea
+    padding: 0.8em
+    border: 1px solid #ccc
+    border-radius: 4px
+    font-size: 1em
+    width: 100%
+    background-color: #fff
+    outline: 0
+    @include transition(all, 0.2s, ease)
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none 
+input[type=date],
+input[type=time],
+#field-data, 
+#field-horario
+    padding: 0.7em
+textarea
+    height: 9em
+    // input[type=text]:focus,
+    // input[type=text]:hover,
+    // input[type=email]:focus,
+    // input[type=email]:hover,
+    // select:hover,
+    // select:focus,
+    // textarea:focus,
+    // textarea:hover
+    // box-shadow: 3px 3px 0px rgba(204,204,204,.5)
+select
+    border: 1px solid #ccc
+    border-radius: 4px
+    font-size: 1em
+    width: 100%
+    background-color: #fff  
+    padding: 0.7em
+    // 
+    box-shadow: none
+    // background-color: transparent
+    background-image: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    // option 
+    //   padding: 1em
+select:focus 
+    outline: 0
+input[type=submit]
+    width: 100%
+    padding: 0.8em 1.2em 
+    color: #fff 
+    background-color: $red
+    font-size: 1em
+    border: 0
+    border-radius: 4px
+    text-transform: uppercase
+    cursor: pointer
+    // box-shadow: 0 4px 0px #990000
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none 
+    &:hover
+        @include brightness(1.15)
+    &:disabled
+        background-color: #999
+        &:hover
+            @include brightness(1)
+    input[type=text],
+    input[type=email],
+    select,
+    textarea
+        &.disabled:disabled
+            background-color: #f1f1f1
+    &.alert 
+        border: 1px solid rgba(255, 51, 51, 0.5)
+
+
+form.form-contato
+    width: 100%
+    margin: 0 auto
+    padding: 2em 0 0
+label.label
+    margin: 1em 0 0.4em 0.1em
+    display: block
+    text-transform: uppercase
+.select-field
+    position: relative
+    .fa 
+        position: absolute
+        right: 0
+        margin: 2.4em 0.8em 0
+        font-size: 1em
+    .input-field:last-child
+        display: table
+        width: 100%
+    .col-text
+        display: table-cell
+        vertical-align: middle
+        float: none
+    .warning
+        font-size: 1em
+    .col-submit
+        position: relative
+        display: table-cell
+        vertical-align: middle
+        float: none
+        padding: 2em 0
+    .loading-submit
+        z-index: 90
+        background-color: #666666
+        height: 2em
+        position: absolute
+        width: 90%
+        left: 4%
+        top: 35%
+        @include transition(all, 0.2s, ease)
+    .load
+        z-index: 10
+        width: 1.6em
+        height: 1.6em
+        text-align: center
+        position: absolute 
+        left: 50%
+        top: 50%
+        margin: -0.8em
+        -webkit-animation: circle infinite .65s linear
+        -moz-animation: circle infinite .65s linear
+        -o-animation: circle infinite .65s linear
+        animation: circle infinite .65s linear
+        border: 3px solid #fff
+        border-top-color: transparent
+        border-radius: 100%
+    .col-tel 
+        padding-left: 1em
+        @media (max-width: 580px)
+            float: none
+            width: 100%
+            padding-left: 0
+    // .row 
+    //     div[class^=col]
+    //       float: left
+    @media (max-width: 580px)
+    .col-mail 
+        float: none
+        width: 100%
+    .col-tel
+        float: none
+        width: 100%
+        padding-left: 0
+    .col-text 
+        margin-top: 1em
+    .col-text, .col-submit
+        display: block
+        width: 100%
+
+
+.response
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 1)
+    display: table
+    opacity: 0
+    z-index: -9
+    font-size: 1.6em
+    @include transition(all, 0.2s, ease)
+    @media (min-width: 769px)
+        font-size: 1.8em
+    &.-active 
+        opacity: 0.93
+        z-index: 100
+    .warning 
+        display: table-cell
+        vertical-align: middle
+        color: #666666
+        text-align: center
+        width: 100%
+        padding: 10%
+        line-height: 1.4em
+
+
+.loading-submit
+    z-index: 2
+    height: 2em
+    position: absolute
+    width: 90%
+    height: 90%
+    left: 4%
+    top: 10%
+    @include transition(all, 0.2s, ease)
+.load
+    z-index: 3
+    width: 1.6em
+    height: 1.6em
+    text-align: center
+    position: absolute 
+    left: 50%
+    top: 50%
+    margin: -0.8em
+    -webkit-animation: circle infinite .65s linear
+    -moz-animation: circle infinite .65s linear
+    -o-animation: circle infinite .65s linear
+    animation: circle infinite .65s linear
+    border: 3px solid $red
+    border-top-color: rgba($red, 0)
+    border-radius: 50%
