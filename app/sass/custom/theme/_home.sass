@@ -9,6 +9,24 @@ section
 	height: 100%
 	margin-top: 2em
 
+.header
+	@include boxShadow(0.4em, 0, 0.6em, #999)
+	padding: 1.2em 0 1.4em
+	.col 
+		display: inline-block
+		vertical-align: top 
+		text-align: left
+		margin-right: 0.8em
+		margin-bottom: 0.8em
+		&:last-child 
+			margin-right: 0
+		label 
+			display: block
+			line-height: 2em
+		.fa
+			font-size: 2.1em
+			cursor: pointer
+
 .card 
 	display: inline-block
 	background-color: $bg-color
@@ -52,6 +70,7 @@ section
 	.filter 
 		background-color: #f0f0f2 
 		padding: 0.8em
+		margin-bottom: 0.4em
 		.col 
 			display: inline-block
 			vertical-align: top 
@@ -63,6 +82,37 @@ section
 			label 
 				display: block
 				line-height: 2em
+	.table-scroll 
+		position: relative
+		overflow: scroll
+	.table 
+		min-width: 992px
+		width: 100%
+		table-layout: fixed
+		border-collapse: collapse
+		thead 
+			display: block
+			overflow: auto 
+			background-color: #f0f0f2
+			th 
+				white-space: normal
+		tbody 
+			display: block
+			overflow: auto
+			height: 300px
+			tr:nth-child(even)
+				background-color: #f1f1f3
+			tr:hover 
+				background-color: rgba(#ccc, 0.8)
+		th 
+			font-weight: 700
+			padding: 1em 1em
+			text-align: left
+			width: 250px
+		td 
+			padding: 0.6em 1em
+			text-align: left
+			width: 250px
 
 
 @media (max-width: 580px)
